@@ -119,80 +119,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_LocalPosition.x
       value: -7.4
       objectReference: {fileID: 0}
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_LocalPosition.y
       value: -2.91
       objectReference: {fileID: 0}
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.09765625
       objectReference: {fileID: 0}
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4701420437692884, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+    - target: {fileID: 4350214959763454, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 212349040035445572, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -2084708743
-      objectReference: {fileID: 0}
-    - target: {fileID: 212349040035445572, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212837399925535428, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -479265539
-      objectReference: {fileID: 0}
-    - target: {fileID: 212837399925535428, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 212893236246293354, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1862967463
-      objectReference: {fileID: 0}
-    - target: {fileID: 212893236246293354, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212162662627690440, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: -370985765
-      objectReference: {fileID: 0}
-    - target: {fileID: 212162662627690440, guid: 834b7f5a48f78da4ca2724f4346ffd43,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 834b7f5a48f78da4ca2724f4346ffd43, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: e7d9e2a350b2ccd4393ecbf8e88ba8d8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &423834129
 GameObject:
