@@ -16,10 +16,11 @@ public class PlayerDwarfControl : MonoBehaviour
     void Update ()
     {
         if (Input.GetButtonDown (appendPlayerSuffix ("Jump"))) {
-            Debug.Log("Jumping with " + appendPlayerSuffix("Jump"));
+            Debug.Log (appendPlayerSuffix ("Jump"));
             dwarf.Jump ();
         }
-        if (Input.GetButtonDown (appendPlayerSuffix ("Attack"))) {
+        if (Input.GetAxis (appendPlayerSuffix ("Attack")) == 1) {
+            Debug.Log (appendPlayerSuffix ("Attack"));
             dwarf.Attack ();
         }
     }
