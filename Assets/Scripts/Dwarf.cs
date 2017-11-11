@@ -44,14 +44,14 @@ public class Dwarf: MonoBehaviour, IDwarfControl
         }
     }
 
-	void IDwarfControl.Move(float h)
+    void IDwarfControl.Move(float horizontal, float vertical)
     {
-        anim.SetFloat("Speed", Mathf.Abs(h));
+        anim.SetFloat("Speed", Mathf.Abs(horizontal));
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-        if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
+        if (horizontal * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
             // ... add a force to the player.
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * horizontal * moveForce);
 
         // If the player's horizontal velocity is greater than the maxSpeed...
         if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)
@@ -59,11 +59,11 @@ public class Dwarf: MonoBehaviour, IDwarfControl
             GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
         // If the input is moving the player right and the player is facing left...
-        if (h > 0 && !facingRight)
+        if (horizontal > 0 && !facingRight)
             // ... flip the player.
             Flip();
         // Otherwise if the input is moving the player left and the player is facing right...
-        else if (h < 0 && facingRight)
+        else if (horizontal < 0 && facingRight)
             // ... flip the player.
             Flip();
     }
