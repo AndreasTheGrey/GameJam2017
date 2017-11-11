@@ -36,7 +36,7 @@ public class Dwarf: MonoBehaviour, IDwarfControl
     }
 
 
-	public void IDwarfControl.Jump()
+    void IDwarfControl.Jump()
     {
         if (grounded)
         {
@@ -44,7 +44,7 @@ public class Dwarf: MonoBehaviour, IDwarfControl
         }
     }
 
-	public void IDwarfControl.Move(float h)
+	void IDwarfControl.Move(float h)
     {
         anim.SetFloat("Speed", Mathf.Abs(h));
 
@@ -68,7 +68,8 @@ public class Dwarf: MonoBehaviour, IDwarfControl
             Flip();
     }
 
-	public void IDwarfControl.Attack() {
+	void IDwarfControl.Attack()
+    {
 		
 	}
 
