@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IDwarfControl {
 	void Jump ();
-	void Move (float horizontal);
+	void Move (float horizontal, float vertical);
 	void Attack ();
 }
