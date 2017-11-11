@@ -5,26 +5,28 @@ using UnityEngine;
 public class PlayerDwarfControl : MonoBehaviour
 {
 
-    public IDwarfControl dwarfControl;
+    private Dwarf dwarf;
     public int playerNum = 1;
 
     void Start ()
     {
+        dwarf = GetComponent<Dwarf>();
     }
 
     void Update ()
     {
         if (Input.GetButtonDown (appendPlayerSuffix ("Jump"))) {
-            dwarfControl.Jump ();
+            Debug.Log("Jumping with " + appendPlayerSuffix("Jump"));
+            dwarf.Jump ();
         }
         if (Input.GetButtonDown (appendPlayerSuffix ("Attack"))) {
-            dwarfControl.Attack ();
+            dwarf.Attack ();
         }
     }
 
     void FixedUpdate ()
     {
-        dwarfControl.Move (Input.GetAxis (appendPlayerSuffix ("Horizontal")), Input.GetAxis (appendPlayerSuffix ("Vertical")));
+        dwarf.Move (Input.GetAxis (appendPlayerSuffix ("Horizontal")), Input.GetAxis (appendPlayerSuffix ("Vertical")));
     }
 
     private string appendPlayerSuffix (string name)

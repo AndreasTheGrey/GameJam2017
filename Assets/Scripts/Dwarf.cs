@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Dwarf: MonoBehaviour, IDwarfControl
+public class Dwarf: MonoBehaviour
 {
     [HideInInspector]
     public bool facingRight = true;
     // For determining which way the player is currently facing.
     [HideInInspector]
-    public bool jump = false;
+    private bool jump = false;
     // Condition for whether the player should jump.
 
     public float moveForce = 365f;
@@ -44,14 +44,14 @@ public class Dwarf: MonoBehaviour, IDwarfControl
     }
 
 
-    void IDwarfControl.Jump ()
+    public void Jump ()
     {
         if (grounded) {
             jump = true;
         }
     }
 
-    void IDwarfControl.Move (float horizontal, float vertical)
+    public void Move (float horizontal, float vertical)
     {
         anim.SetFloat ("Speed", Mathf.Abs (horizontal));
 
@@ -75,7 +75,7 @@ public class Dwarf: MonoBehaviour, IDwarfControl
             Flip ();
     }
 
-    void IDwarfControl.Attack ()
+    public void Attack ()
     {
 		
     }
