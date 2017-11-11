@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Dwarf: MonoBehaviour
+public class Dwarf: MonoBehaviour, IDwarfControl
 {
     [HideInInspector]
     public bool facingRight = true;         // For determining which way the player is currently facing.
@@ -35,7 +35,8 @@ public class Dwarf: MonoBehaviour
 
     }
 
-    public void Jump()
+
+	public void IDwarfControl.Jump()
     {
         if (grounded)
         {
@@ -43,7 +44,7 @@ public class Dwarf: MonoBehaviour
         }
     }
 
-    public void Move(float h)
+	public void IDwarfControl.Move(float h)
     {
         anim.SetFloat("Speed", Mathf.Abs(h));
 
@@ -66,6 +67,10 @@ public class Dwarf: MonoBehaviour
             // ... flip the player.
             Flip();
     }
+
+	public void IDwarfControl.Attack() {
+		
+	}
 
     void FixedUpdate()
     {
