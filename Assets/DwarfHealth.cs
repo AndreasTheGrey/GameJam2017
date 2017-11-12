@@ -6,7 +6,7 @@ public class DwarfHealth : MonoBehaviour {
 
 
     private Animator anim;
-    private bool dead;
+    public bool dead;
     public int healthPoints;
     void Awake()
     {
@@ -24,9 +24,13 @@ public class DwarfHealth : MonoBehaviour {
 		
 	}
 
-    private void takeDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         healthPoints = healthPoints - dmg;
+        Transform neck = this.gameObject.transform.GetChild(1);
+        neck.localPosition = new Vector3(neck.localPosition.x, (neck.localPosition.y - 0.2f), neck.localPosition.z);
+        Debug.Log(neck.position);
+
         if (healthPoints <= 0)
         {
             anim.SetTrigger("Dead");

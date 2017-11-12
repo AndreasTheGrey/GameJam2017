@@ -120,10 +120,9 @@ GameObject:
   - component: {fileID: 114428981113712960}
   - component: {fileID: 210543559621750772}
   - component: {fileID: 114036128733139124}
-  - component: {fileID: 114084342049950842}
   m_Layer: 9
   m_Name: Dwarf
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,6 +184,7 @@ GameObject:
   - component: {fileID: 4471127222140376}
   - component: {fileID: 212966922643914138}
   - component: {fileID: 61093953397556298}
+  - component: {fileID: 114761159128954492}
   m_Layer: 9
   m_Name: hammer
   m_TagString: Untagged
@@ -212,7 +212,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1590861954484964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4, y: -2.91, z: -0.09765625}
+  m_LocalPosition: {x: -5.05, y: -3.1, z: -0.09765625}
   m_LocalScale: {x: 1, y: 1, z: 1.6030903}
   m_Children:
   - {fileID: 4987968299126736}
@@ -271,7 +271,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1580742598813864}
   m_LocalRotation: {x: -0, y: -0, z: -0.009712545, w: -0.99995285}
-  m_LocalPosition: {x: 0.147, y: 0.003, z: 0}
+  m_LocalPosition: {x: 0.147, y: 0.0031424346, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4891350067485332}
@@ -313,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774503595821738}
   m_LocalRotation: {x: -0, y: -0, z: 0.0013680308, w: 0.9999991}
-  m_LocalPosition: {x: 0.058000088, y: 0.31700015, z: 0}
+  m_LocalPosition: {x: 0.058000088, y: 0.31716895, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4355872486459274}
@@ -443,19 +443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b57a8ddbab7378408a95c1aa02552fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dead: 0
   healthPoints: 3
---- !u!114 &114084342049950842
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1590861954484964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d940051039885a499a102522b0769ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNum: 1
 --- !u!114 &114428981113712960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -471,6 +460,8 @@ MonoBehaviour:
   moveForce: 365
   maxSpeed: 4
   jumpForce: 500
+  hammer: {fileID: 114761159128954492}
+  healthPoints: 0
 --- !u!114 &114571064751091666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,6 +471,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3816323b10e33245853a89f9b619639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114761159128954492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944086754459280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c322cedf41d10d94eac983e64eda80ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!210 &210543559621750772
