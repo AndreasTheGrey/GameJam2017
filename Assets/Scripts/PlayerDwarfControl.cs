@@ -6,7 +6,7 @@ public class PlayerDwarfControl : MonoBehaviour
 {
 
     private Dwarf dwarf;
-    public int playerNum = 1;
+    public int PlayerNum = 1;
 
     void Start ()
     {
@@ -32,6 +32,6 @@ public class PlayerDwarfControl : MonoBehaviour
 
     private string appendPlayerSuffix (string name)
     {
-        return name + "_P" + playerNum;
+        return name + "_P" + PlayerNum;
     }
 }
