@@ -40,13 +40,16 @@ public class Dwarf: MonoBehaviour
     {
         // The player is grounded if a linecast to the groundcheck position hits anything on the ground layer.
         grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
+        
+        anim.SetBool("Grounded", grounded);
 
     }
 
 
     public void Jump ()
     {
-        if (grounded) {
+        if (grounded)
+        {
             jump = true;
         }
     }
@@ -85,6 +88,7 @@ public class Dwarf: MonoBehaviour
         if (jump) {
             // Set the Jump animator trigger parameter.
             anim.SetTrigger ("Jump");
+
 
             // Add a vertical force to the player.
             GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0f, jumpForce));
