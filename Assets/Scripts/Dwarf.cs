@@ -30,6 +30,7 @@ public class Dwarf: MonoBehaviour
 
     private bool dead;
     public int healthPoints;
+    public string dwarfName;
 
     private DwarfHealth dh;
 
