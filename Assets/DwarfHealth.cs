@@ -8,6 +8,7 @@ public class DwarfHealth : MonoBehaviour {
     private Animator anim;
     public bool dead;
     public int healthPoints;
+    public GameObject smackPrefab;
     void Awake()
     {
         dead = false;
@@ -26,9 +27,15 @@ public class DwarfHealth : MonoBehaviour {
 
     public void TakeDamage(int dmg)
     {
+        GameObject smack = (GameObject)Instantiate(smackPrefab);
+        smack.transform.position = gameObject.transform.position;
+
         healthPoints = healthPoints - dmg;
-        Transform neck = GetComponent<Transform>();
-        neck.localScale = new Vector3(neck.localScale.x, neck.localScale.y - 0.2f, neck.localScale.z);
+        if (healthPoints >= 0)
+        {
+            Transform neck = GetComponent<Transform>();
+            neck.localScale = new Vector3(neck.localScale.x, neck.localScale.y - 0.2f, neck.localScale.z);
+        }
 
         if (healthPoints <= 0)
         {
