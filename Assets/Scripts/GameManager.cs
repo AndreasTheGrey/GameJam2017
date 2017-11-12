@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour {
 
@@ -18,16 +19,25 @@ public class GameManager : MonoBehaviour {
 
         fightManager = GetComponent<FightManager>();
 
-        InitGame();
+        ShowMenu();
     }
 
-    void InitGame() {
+    public void ShowMenu() {
+        UnloadScene ("EndMenu");
         SceneManager.LoadScene ("Menu", LoadSceneMode.Additive);
     }
 
     public void StartGame(int playerAmount) {
-        SceneManager.UnloadSceneAsync ("Menu");
+        UnloadScene ("Menu");
         fightManager.startNewFight (playerAmount);
+    }
+
+    public void FightEnd(string winningDwarfName) {
+        SceneManager.LoadScene ("EndMenu", LoadSceneMode.Additive);
+    }
+
+    private void UnloadScene(string scene) {
+        try { SceneManager.UnloadSceneAsync (scene); } catch (ArgumentException exc) {}
     }
 
 	void Start () {
