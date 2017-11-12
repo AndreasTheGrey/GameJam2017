@@ -9,6 +9,7 @@ public class DwarfHealth : MonoBehaviour {
     public bool dead;
     public int healthPoints;
     public GameObject smackPrefab;
+    public AudioClip[] jumpClips;			// Array of clips for when the player jumps.
     void Awake()
     {
         dead = false;
@@ -27,6 +28,7 @@ public class DwarfHealth : MonoBehaviour {
 
     public void TakeDamage(int dmg)
     {
+        AudioSource.PlayClipAtPoint(jumpClips[0], transform.position);
         GameObject smack = (GameObject)Instantiate(smackPrefab);
         smack.transform.position = gameObject.transform.position;
 
