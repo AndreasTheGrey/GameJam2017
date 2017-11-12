@@ -40,6 +40,7 @@ public class Dwarf: MonoBehaviour
         groundCheck = transform.Find ("groundCheck");
         anim = GetComponent<Animator> ();
         dh = GetComponent<DwarfHealth>();
+
     }
 
 
@@ -97,6 +98,7 @@ public class Dwarf: MonoBehaviour
             return;
         }
         if (canAttack)
+
             anim.SetTrigger("Attack");
             canAttack = false;
     }
