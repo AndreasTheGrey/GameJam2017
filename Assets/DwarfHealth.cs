@@ -27,9 +27,8 @@ public class DwarfHealth : MonoBehaviour {
     public void TakeDamage(int dmg)
     {
         healthPoints = healthPoints - dmg;
-        Transform neck = this.gameObject.transform.GetChild(1);
-        neck.localPosition = new Vector3(neck.localPosition.x, (neck.localPosition.y - 0.2f), neck.localPosition.z);
-        Debug.Log(neck.position);
+        Transform neck = GetComponent<Transform>();
+        neck.localScale = new Vector3(neck.localScale.x, neck.localScale.y - 0.2f, neck.localScale.z);
 
         if (healthPoints <= 0)
         {
