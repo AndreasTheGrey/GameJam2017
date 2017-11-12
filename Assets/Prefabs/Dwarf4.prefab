@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 210793790283204174}
   - component: {fileID: 114575010435571898}
   - component: {fileID: 82891907061752632}
+  - component: {fileID: 114174674462532434}
   m_Layer: 9
   m_Name: Dwarf4
   m_TagString: Player
@@ -530,6 +531,18 @@ MonoBehaviour:
   hammer: {fileID: 114694486150977200}
   healthPoints: 0
   dwarfName: 
+--- !u!114 &114174674462532434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134138661319002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d940051039885a499a102522b0769ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNum: 1
 --- !u!114 &114575010435571898
 MonoBehaviour:
   m_ObjectHideFlags: 1

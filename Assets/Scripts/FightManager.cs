@@ -5,7 +5,7 @@ using UnityEngine;
 public class FightManager : MonoBehaviour {
 
     public Transform[] SpawnPoints;
-    public GameObject DwarfPrefab;
+    public GameObject[] DwarfPrefabs;
     private List<GameObject> dwarves = new List<GameObject> ();
     private bool fighting;
 
@@ -22,7 +22,7 @@ public class FightManager : MonoBehaviour {
                 if (playersSpawned == players) {
                     break;
                 }
-                GameObject dwarf = (GameObject)Instantiate (DwarfPrefab);
+                GameObject dwarf = (GameObject)Instantiate (DwarfPrefabs[i]);
                 dwarf.GetComponent<PlayerDwarfControl> ().PlayerNum = i + 1;
                 dwarf.transform.position = SpawnPoints [i].transform.position;
                 dwarves.Add (dwarf);

@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 210315788743020118}
   - component: {fileID: 114708360138889586}
   - component: {fileID: 82397690815123180}
+  - component: {fileID: 114049666802003542}
   m_Layer: 9
   m_Name: Dwarf2
   m_TagString: Player
@@ -512,6 +513,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114049666802003542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693521782754670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d940051039885a499a102522b0769ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerNum: 1
 --- !u!114 &114409689812773356
 MonoBehaviour:
   m_ObjectHideFlags: 1
