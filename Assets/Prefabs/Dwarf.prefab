@@ -213,8 +213,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1590861954484964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.43, y: -3.44, z: -0.09765625}
-  m_LocalScale: {x: 1, y: 1, z: 1.6030903}
+  m_LocalPosition: {x: -6.0861, y: -2.5643, z: -0.09765625}
+  m_LocalScale: {x: 0.7760867, y: 0.77608657, z: 1.2441369}
   m_Children:
   - {fileID: 4987968299126736}
   - {fileID: 4355872486459274}
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d940051039885a499a102522b0769ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
+  PlayerNum: 1
 --- !u!114 &114428981113712960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,6 +477,7 @@ MonoBehaviour:
   jumpForce: 450
   hammer: {fileID: 114761159128954492}
   healthPoints: 0
+  dwarfName: 
 --- !u!114 &114571064751091666
 MonoBehaviour:
   m_ObjectHideFlags: 1

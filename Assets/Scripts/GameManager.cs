@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance = null;
     private FightManager fightManager;
+    public string winner;
 
     void Awake() {
         if (Instance == null)
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void FightEnd(string winningDwarfName) {
+        winner = winningDwarfName;
         SceneManager.LoadScene ("EndMenu", LoadSceneMode.Additive);
     }
 

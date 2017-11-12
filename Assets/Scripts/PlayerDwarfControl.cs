@@ -11,6 +11,7 @@ public class PlayerDwarfControl : MonoBehaviour
     void Start ()
     {
         dwarf = GetComponent<Dwarf>();
+        dwarf.dwarfName = "Player " + PlayerNum;
     }
 
     void Update ()
