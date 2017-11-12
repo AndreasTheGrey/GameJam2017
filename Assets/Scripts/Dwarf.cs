@@ -26,13 +26,19 @@ public class Dwarf: MonoBehaviour
 
     private Animator anim;
     // Reference to the player's animator component.
+    public Hammer hammer;
 
+    private bool dead;
+    public int healthPoints;
+
+    private DwarfHealth dh;
 
     void Awake ()
     {
         // Setting up references.
         groundCheck = transform.Find ("groundCheck");
         anim = GetComponent<Animator> ();
+        dh = GetComponent<DwarfHealth>();
     }
 
 
@@ -55,6 +61,10 @@ public class Dwarf: MonoBehaviour
 
     public void Move (float horizontal, float vertical)
     {
+        if (dh.dead)
+        {
+            return;
+        }
         anim.SetFloat ("Speed", Mathf.Abs (horizontal));
 
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
@@ -77,13 +87,35 @@ public class Dwarf: MonoBehaviour
             Flip ();
     }
 
+    private bool canAttack = true;
+
     public void Attack ()
     {
-        anim.SetTrigger("Attack");
+        if (dh.dead)
+        {
+            return;
+        }
+        if (canAttack)
+            anim.SetTrigger("Attack");
+            canAttack = false;
+    }
+
+    public void DoDamage()
+    {
+        hammer.DoDamage();
+    }
+
+    public void refreshAttack()
+    {
+        canAttack = true;
     }
 
     void FixedUpdate ()
     {
+        if (dh.dead)
+        {
+            return;
+        }
         if (jump) {
             // Set the Jump animator trigger parameter.
             anim.SetTrigger ("Jump");
