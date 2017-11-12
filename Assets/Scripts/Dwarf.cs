@@ -45,7 +45,6 @@ public class Dwarf: MonoBehaviour
 
     }
 
-
     public void Jump ()
     {
         if (grounded)
@@ -80,7 +79,7 @@ public class Dwarf: MonoBehaviour
 
     public void Attack ()
     {
-		
+        anim.SetTrigger("Attack");
     }
 
     void FixedUpdate ()
